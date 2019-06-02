@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>DeleteButton</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M18,5 L6,5 C5.44771525,5 5,5.44771525 5,6 C5,6.55228475 5.44771525,7 6,7 L16,7 L18,7 C18.5522847,7 19,6.55228475 19,6 C19,5.44771525 18.5522847,5 18,5 Z M11.5,2 L12.5,2 C13.1531094,2 13.7087289,2.41740381 13.9146471,3 L18,3 C19.6568542,3 21,4.34314575 21,6 C21,7.38346808 20.0635323,8.5482124 18.7899108,8.89491901 C18.9254865,9.23690815 19,9.60975229 19,10 L19,18 C19,20.209139 17.209139,22 15,22 L9,22 C6.790861,22 5,20.209139 5,18 L5,10 C5,9.60975229 5.07451355,9.23690815 5.21008923,8.89491901 C3.93646773,8.5482124 3,7.38346808 3,6 C3,4.34314575 4.34314575,3 6,3 L10.0853529,3 C10.2912711,2.41740381 10.8468906,2 11.5,2 Z M8,9 C7.44771525,9 7,9.44771525 7,10 L7,18 C7,19.1045695 7.8954305,20 9,20 L15,20 C16.1045695,20 17,19.1045695 17,18 L17,10 C17,9.44771525 16.5522847,9 16,9 L8,9 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="Homepage" transform="translate(-253.000000, -476.000000)">
+            <g id="Edit/Delete-Icons" transform="translate(239.000000, 467.000000)">
+                <g id="trash" transform="translate(11.000000, 7.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Mask" fill-rule="nonzero"></g>
+                    <g id="color/black" mask="url(#mask-2)" fill="#000000" fill-rule="evenodd">
+                        <rect id="Change-Fill-Color" x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
