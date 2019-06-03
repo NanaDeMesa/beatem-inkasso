@@ -1,8 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
+const Delete = styled.img`
+  width: 20px;
+  height: 20px;
+`;
 export default function CardDelete({ deleteCard }) {
   return (
-    <>src="/assets/DeleteButton.svg" alt="Delete Icon" onClick={deleteCard}</>
+    <Delete
+      src="./assets/DeleteButton.svg"
+      alt="Delete Icon"
+      onClick={deleteCard}
+    />
   );
 }

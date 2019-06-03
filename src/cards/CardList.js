@@ -8,12 +8,12 @@ const StyledBackground = styled.main`
   height: 100%;
 `;
 
-export default function CardList({ cards }) {
+export default function CardList({ cards, deleteCard }) {
   return (
     <StyledBackground>
       <section className="card-list">
         {cards.map(card => (
-          <Card key={card._id} {...card} />
+          <Card key={card._id} {...card} deleteCard={() => deleteCard(card)} />
         ))}
       </section>
     </StyledBackground>

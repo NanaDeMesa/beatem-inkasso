@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import CardDelete from "./CardDelete";
 
 const StyledDebt = styled.section`
   border-bottom: solid 1px #eeeeee;
@@ -34,12 +35,18 @@ const StyledDueDate = styled.div`
   justify-content: flex-start;
 `;
 
-export default function Card({ creditorName, amountValue, dueDateValue }) {
+export default function Card({
+  creditorName,
+  amountValue,
+  dueDateValue,
+  deleteCard
+}) {
   return (
     <StyledDebt>
       <StyledCreditor>{creditorName}</StyledCreditor>
       <StyledAmount>{amountValue} €</StyledAmount>
       <StyledDueDate>since {dueDateValue}</StyledDueDate>
+      <CardDelete deleteCard={deleteCard} />
     </StyledDebt>
   );
 }

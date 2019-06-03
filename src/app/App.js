@@ -1,5 +1,5 @@
 import GlobalStyle from "./GlobalStyle";
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -9,7 +9,7 @@ import {
   postCard,
   getFromLocal,
   setToLocal,
-  patchCard
+  findIndexOfCard
 } from "../services";
 import CreatePage from "../create/CreatePage";
 import CardsPage from "../cards/CardsPage";
@@ -22,81 +22,69 @@ const Grid = styled.div`
   width: 100%;
 `;
 
-export default class App extends Component {
-  state = {
-    cards: getFromLocal("cards") || []
-  };
+export default function App() {
+  const [cards, setCards] = useState(getFromLocal("cards") || []);
 
-  componentDidMount() {
-    this.loadCards();
-  }
+  /* Backend Logic
+  
+  useEffect(() => {
+    loadCards();
+  }, []);
+  
+  */
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.cards !== this.state.cards) {
-      setToLocal("cards", this.state.cards);
-    }
-  }
+  useEffect(() => {
+    setToLocal("cards", cards);
+  }, [cards]);
 
-  loadCards() {
+  function loadCards() {
     getCards()
-      .then(data => this.setState({ cards: data }))
+      .then(data => setCards(data))
       .catch(error => console.log(error));
   }
 
-  createCard = (data, history) => {
-    const { cards } = this.state;
+  function deleteCard(card) {
+    const index = findIndexOfCard(card, cards);
+    const newCards = [...cards.slice(0, index), ...cards.slice(index + 1)];
+    setCards(newCards);
+  }
 
+  const createCard = (data, history) => {
     postCard(data)
       .then(newCard => {
-        this.setState({ cards: [...cards, newCard] });
+        setCards([...cards, newCard]);
         history.push("/");
       })
       .catch(error => console.log(error));
   };
 
-  updateCardInState = changedCard => {
-    const { cards } = this.state;
+  const updateCardInState = changedCard => {
     const index = cards.findIndex(card => card._id === changedCard._id);
-    this.setState({
-      cards: [...cards.slice(0, index), changedCard, ...cards.slice(index + 1)]
-    });
+    setCards([
+      ...cards.slice(0, index),
+      changedCard,
+      ...cards.slice(index + 1)
+    ]);
   };
 
-  handleToggleBookmark = card => {
-    patchCard({ bookmarked: !card.bookmarked }, card._id)
-      .then(this.updateCardInState)
-      .catch(error => console.log(error));
-  };
-
-  render() {
-    const { cards } = this.state;
-
-    return (
-      <Grid>
-        <GlobalStyle />
-        <Header />
-        <Router>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <CardsPage
-                onToggleBookmark={this.handleToggleBookmark}
-                cards={cards}
-              />
-            )}
-          />
-          <Route
-            path="/add"
-            render={({ history }) => (
-              <CreatePage
-                onFormSubmit={data => this.createCard(data, history)}
-              />
-            )}
-          />
-          <Footer />
-        </Router>
-      </Grid>
-    );
-  }
+  return (
+    <Grid>
+      <GlobalStyle />
+      <Header />
+      <Router>
+        <Route
+          exact
+          path="/"
+          render={() => <CardsPage cards={cards} deleteCard={deleteCard} />}
+        />
+        <Route
+          path="/add"
+          render={({ history }) => (
+            <CreatePage onFormSubmit={data => createCard(data, history)} />
+          )}
+        />
+        <Footer />
+      </Router>
+    </Grid>
+  );
 }
