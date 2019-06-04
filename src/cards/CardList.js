@@ -42,12 +42,25 @@ const StyledHeading = styled.p`
   padding-left: 20px;
 `;
 
-export default function CardList({ cards, deleteCard, amountValue }) {
+export default function CardList({ cards, deleteCard }) {
+  function getTotal() {
+    const allAmountValues = cards
+      .map(card => parseFloat(card.amountValue.replace(/,/, ".")))
+      .map(Number)
+      .reduce((a, b) => a + b, 0)
+      .toLocaleString("de-DE", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+
+    return allAmountValues;
+  }
+
   return (
     <StyledBackground>
       <StyledAmountBox>
         <StyledCreditIcon src="./assets/CreditImg.svg" alt="Credit Icon" />
-        <StyledResult>{amountValue}</StyledResult>
+        <StyledResult>{getTotal()}€</StyledResult>
         <StyledHeading>Debt</StyledHeading>
       </StyledAmountBox>
       <section>

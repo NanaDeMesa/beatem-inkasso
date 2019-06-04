@@ -16,9 +16,9 @@ import CardsPage from "../cards/CardsPage";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-rows: 80px auto 80px;
+  grid-template-rows: 90px auto 80px;
   position: absolute;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 `;
 

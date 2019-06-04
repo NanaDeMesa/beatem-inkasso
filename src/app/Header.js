@@ -1,25 +1,23 @@
 import React from "react";
 import styled from "styled-components";
 
-const GridHeader = styled.header`
-  display: grid;
-`;
-
-const StyledRandom = styled.div`
+const StyledRandom = styled.header`
   padding: 15px;
   color: white;
   font-size: 18px;
+  display: grid;
 `;
 
 function Header() {
   return (
-    <GridHeader>
+    <>
       <StyledRandom>
         Tip:
         <br />
-        Offer a fair comparison. It’s worth a try!
+        Black sensitive data, if you send proofs to creditor or collection
+        agency.
       </StyledRandom>
-    </GridHeader>
+    </>
   );
 }
 

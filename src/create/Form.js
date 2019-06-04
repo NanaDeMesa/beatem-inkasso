@@ -32,7 +32,7 @@ const StyledInput = styled.input`
   border: none;
   color: #18171a;
   background: #fbfbfb;
-  font-size: 20px;
+  font-size: 18px;
   padding: 5px 0;
 `;
 

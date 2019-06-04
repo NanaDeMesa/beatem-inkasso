@@ -6,6 +6,7 @@ const Delete = styled.img`
   height: 20px;
   display: flex;
   justify-self: end;
+  margin-bottom: 10px;
 `;
 export default function CardDelete({ deleteCard }) {
   return (
