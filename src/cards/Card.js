@@ -25,7 +25,7 @@ const StyledCreditor = styled.div`
 const StyledAmount = styled.div`
   display: flex;
   font-size: 18px;
-  justify-content: flex-end;
+  padding-left: 50px;
 `;
 
 const StyledDueDate = styled.div`

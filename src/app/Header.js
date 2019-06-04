@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 const GridHeader = styled.header`
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
 `;
 
 const StyledRandom = styled.div`

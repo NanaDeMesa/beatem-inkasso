@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="63px" height="53px" viewBox="0 0 63 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>credit-card</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-5.5%" y="-6.0%" width="110.9%" height="112.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.503605769 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M10.8333333,27 L54.1666667,27 L54.1666667,24 C54.1666667,22.3431458 52.9541045,21 51.4583333,21 L13.5416667,21 C12.0458955,21 10.8333333,22.3431458 10.8333333,24 L10.8333333,27 Z M10.8333333,36 L10.8333333,51 C10.8333333,52.6568542 12.0458955,54 13.5416667,54 L51.4583333,54 C52.9541045,54 54.1666667,52.6568542 54.1666667,51 L54.1666667,36 L10.8333333,36 Z M13.5416667,15 L51.4583333,15 C55.9456469,15 59.5833333,19.0294373 59.5833333,24 L59.5833333,51 C59.5833333,55.9705627 55.9456469,60 51.4583333,60 L13.5416667,60 C9.05435307,60 5.41666667,55.9705627 5.41666667,51 L5.41666667,24 C5.41666667,19.0294373 9.05435307,15 13.5416667,15 Z" id="path-2"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.7">
+        <g id="Homepage" transform="translate(-95.000000, -238.000000)">
+            <g id="DebtAmout" filter="url(#filter-1)" transform="translate(76.000000, 202.000000)">
+                <g id="credit-card" transform="translate(17.000000, 23.000000)">
+                    <mask id="mask-3" fill="white">
+                        <use xlink:href="#path-2"></use>
+                    </mask>
+                    <g id="Mask" fill-rule="nonzero"></g>
+                    <g id="color/white" mask="url(#mask-3)" fill="#FFFFFF" fill-rule="evenodd">
+                        <rect id="Change-Fill-Color" x="0" y="0" width="65" height="72"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

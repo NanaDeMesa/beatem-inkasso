@@ -5,7 +5,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import {
-  getCards,
+  /*getCards,*/
   postCard,
   getFromLocal,
   setToLocal,
@@ -18,30 +18,16 @@ const Grid = styled.div`
   display: grid;
   grid-template-rows: 80px auto 80px;
   position: absolute;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 `;
 
 export default function App() {
   const [cards, setCards] = useState(getFromLocal("cards") || []);
 
-  /* Backend Logic
-  
-  useEffect(() => {
-    loadCards();
-  }, []);
-  
-  */
-
   useEffect(() => {
     setToLocal("cards", cards);
   }, [cards]);
-
-  function loadCards() {
-    getCards()
-      .then(data => setCards(data))
-      .catch(error => console.log(error));
-  }
 
   function deleteCard(card) {
     const index = findIndexOfCard(card, cards);
