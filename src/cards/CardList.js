@@ -49,7 +49,7 @@ const StyledHeading = styled.h3`
 
 export default function CardList({ cards, deleteCard }) {
   function getTotal() {
-    const allAmountValues = cards
+    const totalInvoiceAmount = cards
       .map(card => parseFloat(card.amountValue.replace(/,/, ".")))
       .map(Number)
       .reduce((a, b) => a + b, 0)
@@ -58,7 +58,7 @@ export default function CardList({ cards, deleteCard }) {
         maximumFractionDigits: 2
       });
 
-    return allAmountValues;
+    return totalInvoiceAmount;
   }
 
   return (

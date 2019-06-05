@@ -7,7 +7,9 @@ const StyledDebt = styled.section`
   border-top-left-radius: 20%;
   border-top-right-radius: 20%;
   color: #090a0a;
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin: 0 auto;
   padding: 10px 0 5px 0;
   width: 350px;
@@ -16,18 +18,20 @@ const StyledDebt = styled.section`
 const StyledCreditor = styled.div`
   font-size: 20px;
   font-weight: bold;
+  padding-top: 10px;
 `;
 
 const StyledAmount = styled.div`
   display: flex;
   font-size: 20px;
   padding-left: 50px;
+  padding-top: 10px;
 `;
 
 const StyledDueDate = styled.div`
-  align-items: flex-end;
   color: #a2a3a3;
   font-size: 18px;
+  padding-top: 2px;
 `;
 
 export default function Card({
@@ -39,9 +43,8 @@ export default function Card({
   return (
     <StyledDebt>
       <StyledCreditor>{creditorName}</StyledCreditor>
-      <StyledDueDate>since {dueDateValue}</StyledDueDate>
       <StyledAmount>{amountValue} €</StyledAmount>
-
+      <StyledDueDate>since {dueDateValue}</StyledDueDate>
       <CardDelete deleteCard={deleteCard} />
     </StyledDebt>
   );

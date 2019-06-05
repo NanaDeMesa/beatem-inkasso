@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledRandom = styled.header`
+const StyledRandomTips = styled.header`
   color: white;
   display: grid;
   font-size: 18px;
@@ -11,12 +11,12 @@ const StyledRandom = styled.header`
 function Header() {
   return (
     <>
-      <StyledRandom>
+      <StyledRandomTips>
         Tip:
         <br />
-        Black sensitive data, if you send proofs to creditor or collection
+        Black sensitive data, when you send proofs to creditor or collection
         agency.
-      </StyledRandom>
+      </StyledRandomTips>
     </>
   );
 }
