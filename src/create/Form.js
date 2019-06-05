@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const FormContainer = styled.section`
   display: flex;
-  height: 100%;
   flex-direction: column;
+  height: 100%;
   justify-content: flex-end;
 `;
 
@@ -16,23 +16,24 @@ const FormGrid = styled.form`
 `;
 
 const FormHeadline = styled.h1`
-  margin: auto;
   color: white;
   font-size: 20px;
+  margin: auto;
 `;
 
 const StyledWrapper = styled.div`
   border-bottom: solid 1px #eeeeee;
-  width: 350px;
   display: grid;
   margin: 10px auto;
+  width: 350px;
 `;
 
 const StyledInput = styled.input`
+  background: #fbfbfb;
   border: none;
   color: #18171a;
-  background: #fbfbfb;
-  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
   padding: 5px 0;
 `;
 
@@ -45,22 +46,23 @@ const StyledLabel = styled.label`
 `;
 
 const StyledButtonContainer = styled.div`
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 `;
 
 const StyledButton = styled.button`
-  color: #fbfbfb;
-  border: none;
-  display: flex;
-  background: #5495b7;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  justify-content: center;
   align-items: center;
+  background: #5495b7;
+  border: none;
+  border-radius: 50%;
+  color: #fbfbfb;
+  display: flex;
   font-size: 40px;
+  height: 50px;
+  justify-content: center;
+  padding-bottom: 25;
+  width: 50px;
 `;
 
 export default function Form({ onFormSubmit }) {
@@ -105,7 +107,7 @@ export default function Form({ onFormSubmit }) {
             Due Date:
             <StyledInput
               name="dueDateValue"
-              placeholder="(e.g. 04/20/2017)"
+              placeholder="(e.g. 10.04.2017)"
               type="text"
             />
           </StyledLabel>
