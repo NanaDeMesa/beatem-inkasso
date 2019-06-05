@@ -35,6 +35,19 @@ const StyledInput = styled.input`
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   padding: 5px 0;
+
+  ::-webkit-datetime-edit-month-field {
+    color: grey;
+  }
+  ::-webkit-datetime-edit-day-field {
+    color: grey;
+  }
+  ::-webkit-datetime-edit-year-field {
+    color: grey;
+  }
+  ::-webkit-inner-spin-button {
+    display: none;
+  }
 `;
 
 const StyledLabel = styled.label`
@@ -108,7 +121,7 @@ export default function Form({ onFormSubmit }) {
             <StyledInput
               name="dueDateValue"
               placeholder="(e.g. 10.04.2017)"
-              type="text"
+              type="date"
             />
           </StyledLabel>
         </StyledWrapper>

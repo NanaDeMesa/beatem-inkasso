@@ -43,15 +43,6 @@ export default function App() {
       .catch(error => console.log(error));
   };
 
-  const updateCardInState = changedCard => {
-    const index = cards.findIndex(card => card._id === changedCard._id);
-    setCards([
-      ...cards.slice(0, index),
-      changedCard,
-      ...cards.slice(index + 1)
-    ]);
-  };
-
   return (
     <Grid>
       <GlobalStyle />
