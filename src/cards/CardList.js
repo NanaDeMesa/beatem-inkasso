@@ -3,43 +3,48 @@ import Card from "./Card";
 import styled from "styled-components";
 
 const StyledBackground = styled.main`
-  border-radius: 25px 25px 0 0;
   background: #fbfbfb;
-  height: 100%;
+  border-radius: 25px 25px 0 0;
   display: grid;
+  height: 100%;
 `;
 
 const StyledAmountBox = styled.section`
   background: #5495b7;
+  border-radius: 15px;
   box-shadow: 2px 4px 10px #979797;
-  width: 220px;
   height: 200px;
   margin: 50px auto;
-  border-radius: 15px;
+  width: 220px;
 `;
 
 const StyledCreditIcon = styled.img`
-  margin: 18px;
-  width: 65px;
   height: 72px;
+  margin-top: 30px;
+  margin-left: 25px;
+  width: 80px;
 `;
 
 const StyledResult = styled.div`
-  display: flex;
-  margin-left: 20px;
-  height: 30px;
-  width: 150px;
-  font-weight: bold;
-  font-size: 22px;
   color: white;
-  padding-top: 10px;
+  display: flex;
+  font-size: 22px;
+  font-weight: bold;
+  height: 30px;
+  margin: 0;
+  padding-left: 30px;
+  padding-top: 12px;
+  width: 280px;
 `;
 
-const StyledHeading = styled.p`
-  color: white;
-  opacity: 0.7;
+const StyledHeading = styled.h3`
+  color: #fbfbfb;
+  font-size: 20px;
   font-weight: bold;
-  padding-left: 20px;
+  margin: 0;
+  opacity: 0.7;
+  padding-left: 30px;
+  padding-top: 8px;
 `;
 
 export default function CardList({ cards, deleteCard }) {
@@ -60,7 +65,7 @@ export default function CardList({ cards, deleteCard }) {
     <StyledBackground>
       <StyledAmountBox>
         <StyledCreditIcon src="./assets/CreditImg.svg" alt="Credit Icon" />
-        <StyledResult>{getTotal()}€</StyledResult>
+        <StyledResult>{getTotal()} EUR</StyledResult>
         <StyledHeading>Debt</StyledHeading>
       </StyledAmountBox>
       <section>

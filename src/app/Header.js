@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledRandom = styled.header`
-  padding: 15px;
   color: white;
-  font-size: 18px;
   display: grid;
+  font-size: 18px;
+  padding: 15px;
 `;
 
 function Header() {

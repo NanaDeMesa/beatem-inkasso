@@ -3,21 +3,21 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 const StyledFooter = styled.footer`
+  align-items: center;
   background: #fbfbfb;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
 `;
 
 const StyledNavLink = styled(NavLink)`
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
   color: grey;
+  display: flex;
   font-size: 35px;
+  height: 100%;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
 `;
 
 function Footer() {

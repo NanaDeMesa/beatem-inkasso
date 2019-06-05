@@ -4,48 +4,44 @@ import CardDelete from "./CardDelete";
 
 const StyledDebt = styled.section`
   border-bottom: solid 1px #eeeeee;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
   color: #090a0a;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
   margin: 0 auto;
   padding: 10px 0 5px 0;
   width: 350px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 `;
 
 const StyledCreditor = styled.div`
-  display: flex;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-  justify-content: flex-start;
 `;
 
 const StyledAmount = styled.div`
   display: flex;
-  font-size: 18px;
+  font-size: 20px;
   padding-left: 50px;
 `;
 
 const StyledDueDate = styled.div`
+  align-items: flex-end;
   color: #a2a3a3;
-  display: flex;
   font-size: 18px;
-  justify-content: flex-start;
 `;
 
 export default function Card({
-  creditorName,
   amountValue,
-  dueDateValue,
-  deleteCard
+  creditorName,
+  deleteCard,
+  dueDateValue
 }) {
   return (
     <StyledDebt>
       <StyledCreditor>{creditorName}</StyledCreditor>
-      <StyledAmount>{amountValue} €</StyledAmount>
       <StyledDueDate>since {dueDateValue}</StyledDueDate>
+      <StyledAmount>{amountValue} €</StyledAmount>
+
       <CardDelete deleteCard={deleteCard} />
     </StyledDebt>
   );
