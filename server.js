@@ -13,10 +13,3 @@ app.post("/cards", (req, res) => {
     .then(card => res.json(card))
     .catch(err => res.json(err));
 });
-
-app.patch("/cards/:id", (req, res) => {
-  const { id } = req.params;
-  Card.findByIdAndUpdate(id, req.body, { new: true })
-    .then(card => res.json(card))
-    .catch(err => res.json(err));
-});

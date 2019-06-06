@@ -13,6 +13,7 @@ const FormGrid = styled.form`
   border-radius: 25px 25px 0 0;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  padding-top: 20px;
 `;
 
 const FormHeadline = styled.h1`
@@ -35,6 +36,19 @@ const StyledInput = styled.input`
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
   padding: 5px 0;
+
+  ::-webkit-datetime-edit-month-field {
+    color: grey;
+  }
+  ::-webkit-datetime-edit-day-field {
+    color: grey;
+  }
+  ::-webkit-datetime-edit-year-field {
+    color: grey;
+  }
+  ::-webkit-inner-spin-button {
+    display: none;
+  }
 `;
 
 const StyledLabel = styled.label`
@@ -52,17 +66,24 @@ const StyledButtonContainer = styled.div`
 `;
 
 const StyledButton = styled.button`
+  user-select: none;
+  display: block;
   align-items: center;
   background: #5495b7;
   border: none;
   border-radius: 50%;
   color: #fbfbfb;
-  display: flex;
   font-size: 40px;
   height: 50px;
   justify-content: center;
-  padding-bottom: 25;
   width: 50px;
+  min-width: 0;
+  max-width: 50px;
+  padding: 0;
+
+  ::-webkit-appearance {
+    display: none;
+  }
 `;
 
 export default function Form({ onFormSubmit }) {
@@ -108,7 +129,7 @@ export default function Form({ onFormSubmit }) {
             <StyledInput
               name="dueDateValue"
               placeholder="(e.g. 10.04.2017)"
-              type="text"
+              type="date"
             />
           </StyledLabel>
         </StyledWrapper>
