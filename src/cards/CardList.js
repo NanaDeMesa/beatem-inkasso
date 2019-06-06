@@ -2,7 +2,7 @@ import React from "react";
 import Card from "./Card";
 import styled from "styled-components";
 
-const StyledBackground = styled.main`
+export const StyledBackground = styled.main`
   background: #fbfbfb;
   border-radius: 25px 25px 0 0;
   display: grid;
