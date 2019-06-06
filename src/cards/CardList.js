@@ -14,7 +14,7 @@ const StyledAmountBox = styled.section`
   border-radius: 15px;
   box-shadow: 2px 4px 10px #979797;
   height: 200px;
-  margin: 50px auto;
+  margin: 35px auto;
   width: 220px;
 `;
 
@@ -47,6 +47,25 @@ const StyledHeading = styled.h3`
   padding-top: 8px;
 `;
 
+const StyledInputLabel = styled.label`
+  margin: 0 auto;
+`;
+
+const StyledInput = styled.input`
+  width: 326px;
+  height: 36px;
+  background: #eeeeee;
+  margin: auto;
+  border-radius: 2em;
+  margin-top: 35px;
+  border: solid 1px #d3d3d3;
+  font-size: 18px;
+`;
+
+const StyledSearchIcon = styled.img`
+  position: sticky;
+`;
+
 export default function CardList({ cards, deleteCard }) {
   function getTotal() {
     const totalInvoiceAmount = cards
@@ -63,6 +82,13 @@ export default function CardList({ cards, deleteCard }) {
 
   return (
     <StyledBackground>
+      <StyledInputLabel>
+        <StyledInput
+          type="text"
+          placeholder="                            Search"
+        />
+        <StyledSearchIcon src="/assets/SearchIcon.svg" />
+      </StyledInputLabel>
       <StyledAmountBox>
         <StyledCreditIcon src="./assets/CreditImg.svg" alt="Credit Icon" />
         <StyledResult>{getTotal()} EUR</StyledResult>
