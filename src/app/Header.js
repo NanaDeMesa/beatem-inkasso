@@ -14,7 +14,7 @@ function Header() {
       "The statues of limitation must be objected by the debtor vis-à-vis the creditor.",
       "Keep proof of payment at least for three years.",
       "After each agreement by telephone, ask for a written confirmation.",
-      "Before you go to a law firm, check whether you can access the public legal information.",
+      "Before you go to a law firm, check whether you can access a public legal information.",
       "If you’re not sure, if the debt is legit ask for a signed contract or a proof.",
       "Black sensitive data, when you send proofs to the creditor or collection agency.",
       "Offer a fair comparison/instalment. It is worth a try!",

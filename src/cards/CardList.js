@@ -5,7 +5,6 @@ import styled from "styled-components";
 export const StyledBackground = styled.main`
   background: #fbfbfb;
   border-radius: 25px 25px 0 0;
-  display: grid;
   height: 100%;
 `;
 
@@ -14,7 +13,7 @@ const StyledAmountBox = styled.section`
   border-radius: 15px;
   box-shadow: 2px 4px 10px #979797;
   height: 200px;
-  margin: 35px auto;
+  margin: 0 auto 35px auto;
   width: 220px;
 `;
 
@@ -41,7 +40,7 @@ const StyledHeading = styled.h3`
   color: #fbfbfb;
   font-size: 20px;
   font-weight: bold;
-  margin: 0;
+  margin: 0 auto;
   opacity: 0.7;
   padding-left: 30px;
   padding-top: 8px;
@@ -55,15 +54,17 @@ const StyledInput = styled.input`
   width: 326px;
   height: 36px;
   background: #eeeeee;
-  margin: auto;
   border-radius: 2em;
   margin-top: 35px;
+  margin-left: 25px;
   border: solid 1px #d3d3d3;
   font-size: 18px;
 `;
 
 const StyledSearchIcon = styled.img`
-  position: sticky;
+  position: relative;
+  left: 310px;
+  top: -30px;
 `;
 
 export default function CardList({ cards, deleteCard }) {
@@ -85,10 +86,10 @@ export default function CardList({ cards, deleteCard }) {
       <StyledInputLabel>
         <StyledInput
           type="text"
-          placeholder="                            Search"
+          placeholder="                             Search"
         />
-        <StyledSearchIcon src="/assets/SearchIcon.svg" />
       </StyledInputLabel>
+      <StyledSearchIcon src="/assets/SearchIcon.svg" />
       <StyledAmountBox>
         <StyledCreditIcon src="./assets/CreditImg.svg" alt="Credit Icon" />
         <StyledResult>{getTotal()} EUR</StyledResult>
