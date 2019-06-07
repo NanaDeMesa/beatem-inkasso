@@ -6,6 +6,7 @@ export const StyledBackground = styled.main`
   background: #fbfbfb;
   border-radius: 25px 25px 0 0;
   height: 100%;
+  display: grid;
 `;
 
 const StyledAmountBox = styled.section`
@@ -56,15 +57,16 @@ const StyledInput = styled.input`
   background: #eeeeee;
   border-radius: 2em;
   margin-top: 35px;
-  margin-left: 25px;
   border: solid 1px #d3d3d3;
   font-size: 18px;
 `;
 
-const StyledSearchIcon = styled.img`
+const StyledButton = styled.img`
+  width: 28px;
+  height: 28px;
   position: relative;
   left: 310px;
-  top: -30px;
+  top: -34px;
 `;
 
 export default function CardList({ cards, deleteCard }) {
@@ -89,7 +91,7 @@ export default function CardList({ cards, deleteCard }) {
           placeholder="                             Search"
         />
       </StyledInputLabel>
-      <StyledSearchIcon src="/assets/SearchIcon.svg" />
+      <StyledButton src="./assets/SearchButton.svg" />
       <StyledAmountBox>
         <StyledCreditIcon src="./assets/CreditImg.svg" alt="Credit Icon" />
         <StyledResult>{getTotal()} EUR</StyledResult>
