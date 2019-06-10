@@ -54,6 +54,12 @@ export default function App() {
           render={() => <CardsPage cards={cards} deleteCard={deleteCard} />}
         />
         <Route
+          path="/info"
+          render={({ history }) => (
+            <CreatePage onFormSubmit={data => createCard(data, history)} />
+          )}
+        />
+        <Route
           path="/add"
           render={({ history }) => (
             <CreatePage onFormSubmit={data => createCard(data, history)} />

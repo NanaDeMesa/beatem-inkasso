@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./Card";
 import styled from "styled-components";
+import Searchbar from "./Searchbar";
 
 export const StyledBackground = styled.main`
   background: #fbfbfb;
   border-radius: 25px 25px 0 0;
-  display: grid;
   height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
 `;
 
 const StyledAmountBox = styled.section`
@@ -14,7 +16,7 @@ const StyledAmountBox = styled.section`
   border-radius: 15px;
   box-shadow: 2px 4px 10px #979797;
   height: 200px;
-  margin: 35px auto;
+  margin: 0 auto 35px auto;
   width: 220px;
 `;
 
@@ -41,32 +43,25 @@ const StyledHeading = styled.h3`
   color: #fbfbfb;
   font-size: 20px;
   font-weight: bold;
-  margin: 0;
+  margin: 0 auto;
   opacity: 0.7;
   padding-left: 30px;
   padding-top: 8px;
 `;
 
-const StyledInputLabel = styled.label`
-  margin: 0 auto;
-`;
-
-const StyledInput = styled.input`
-  width: 326px;
-  height: 36px;
-  background: #eeeeee;
-  margin: auto;
-  border-radius: 2em;
-  margin-top: 35px;
-  border: solid 1px #d3d3d3;
-  font-size: 18px;
-`;
-
-const StyledSearchIcon = styled.img`
-  position: sticky;
-`;
-
 export default function CardList({ cards, deleteCard }) {
+  const [searchInput, setSearchInput] = useState("");
+
+  function filterCards() {
+    return cards.filter(card =>
+      card.creditorName.toLowerCase().includes(searchInput.toLowerCase())
+    );
+  }
+
+  function updateSearch(searchQuery) {
+    setSearchInput(searchQuery);
+  }
+
   function getTotal() {
     const totalInvoiceAmount = cards
       .map(card => parseFloat(card.amountValue.replace(/,/, ".")))
@@ -82,23 +77,22 @@ export default function CardList({ cards, deleteCard }) {
 
   return (
     <StyledBackground>
-      <StyledInputLabel>
-        <StyledInput
-          type="text"
-          placeholder="                            Search"
-        />
-        <StyledSearchIcon src="/assets/SearchIcon.svg" />
-      </StyledInputLabel>
+      <Searchbar onInput={updateSearch} value={searchInput} />
       <StyledAmountBox>
         <StyledCreditIcon src="./assets/CreditImg.svg" alt="Credit Icon" />
         <StyledResult>{getTotal()} EUR</StyledResult>
         <StyledHeading>Debt</StyledHeading>
       </StyledAmountBox>
+
       <section>
-        {cards.map(card => (
+        {filterCards().map(card => (
           <Card key={card._id} {...card} deleteCard={() => deleteCard(card)} />
         ))}
       </section>
     </StyledBackground>
   );
 }
+
+/* {filterCards.map(card => (
+  <Card key={card._id} {...card} deleteCard={() => deleteCard(card)} />
+  ))}*/

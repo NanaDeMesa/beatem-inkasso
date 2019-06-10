@@ -26,7 +26,9 @@ function Footer() {
       <StyledNavLink exact to="/">
         <img src="/assets/HomeButton.svg" alt="Home" />
       </StyledNavLink>
-
+      <StyledNavLink exact to="/info">
+        <img src="/assets/InfoButton.svg" alt="Info" />
+      </StyledNavLink>
       <StyledNavLink to="/add">
         <img src="/assets/AddButton.svg" alt="Add" />
       </StyledNavLink>
