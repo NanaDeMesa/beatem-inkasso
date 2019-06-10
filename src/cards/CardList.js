@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./Card";
 import styled from "styled-components";
+import Searchbar from "./Searchbar";
 
 export const StyledBackground = styled.main`
   background: #fbfbfb;
   border-radius: 25px 25px 0 0;
   height: 100%;
   display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
 `;
 
 const StyledAmountBox = styled.section`
@@ -47,29 +49,19 @@ const StyledHeading = styled.h3`
   padding-top: 8px;
 `;
 
-const StyledInputLabel = styled.label`
-  margin: 0 auto;
-`;
-
-const StyledInput = styled.input`
-  width: 326px;
-  height: 36px;
-  background: #eeeeee;
-  border-radius: 2em;
-  margin-top: 35px;
-  border: solid 1px #d3d3d3;
-  font-size: 18px;
-`;
-
-const StyledButton = styled.img`
-  width: 28px;
-  height: 28px;
-  position: relative;
-  left: 310px;
-  top: -34px;
-`;
-
 export default function CardList({ cards, deleteCard }) {
+  const [searchInput, setSearchInput] = useState("");
+
+  function filterCards() {
+    return cards.filter(card =>
+      card.creditorName.toLowerCase().includes(searchInput.toLowerCase())
+    );
+  }
+
+  function updateSearch(searchQuery) {
+    setSearchInput(searchQuery);
+  }
+
   function getTotal() {
     const totalInvoiceAmount = cards
       .map(card => parseFloat(card.amountValue.replace(/,/, ".")))
@@ -85,23 +77,22 @@ export default function CardList({ cards, deleteCard }) {
 
   return (
     <StyledBackground>
-      <StyledInputLabel>
-        <StyledInput
-          type="text"
-          placeholder="                             Search"
-        />
-      </StyledInputLabel>
-      <StyledButton src="./assets/SearchButton.svg" />
+      <Searchbar onInput={updateSearch} value={searchInput} />
       <StyledAmountBox>
         <StyledCreditIcon src="./assets/CreditImg.svg" alt="Credit Icon" />
         <StyledResult>{getTotal()} EUR</StyledResult>
         <StyledHeading>Debt</StyledHeading>
       </StyledAmountBox>
+
       <section>
-        {cards.map(card => (
+        {filterCards().map(card => (
           <Card key={card._id} {...card} deleteCard={() => deleteCard(card)} />
         ))}
       </section>
     </StyledBackground>
   );
 }
+
+/* {filterCards.map(card => (
+  <Card key={card._id} {...card} deleteCard={() => deleteCard(card)} />
+  ))}*/

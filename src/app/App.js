@@ -43,7 +43,6 @@ export default function App() {
       .catch(error => console.log(error));
   };
 
-
   return (
     <Grid>
       <GlobalStyle />
@@ -55,6 +54,12 @@ export default function App() {
           render={() => <CardsPage cards={cards} deleteCard={deleteCard} />}
         />
         <Route
+          path="/info"
+          render={({ history }) => (
+            <CreatePage onFormSubmit={data => createCard(data, history)} />
+          )}
+        />
+        <Route
           path="/add"
           render={({ history }) => (
             <CreatePage onFormSubmit={data => createCard(data, history)} />
@@ -64,55 +69,4 @@ export default function App() {
       </Router>
     </Grid>
   );
-}
-export default function Filter({ filters, activeFilter, updateFilter }) {
-  return (
-    <StyledFilter>
-      {filters.map(filter => (
-        <StyledFilterTab
-          key={filter}
-          active={filter === activeFilter ? true : false}
-          onClick={() => updateFilter(filter)}
-        >
-          {filter}
-        </StyledFilterTab>
-      ))}
-    </StyledFilter>
-  )
-}
-
-export default function Searchbar({ onInput, value, addTodo }) {
-  function createNewTodo(event) {
-    event.preventDefault()
-    const options = {
-      weekday: 'long',
-      month: 'long',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric'
-    }
-    const newTodo = {
-      title: event.target.todoInput.value,
-      completed: false,
-      created: new Date().toLocaleDateString('de-DE', options),
-      id: uid()
-    }
-    onInput('')
-    addTodo(newTodo)
-  }
-
-  return (
-    <StyledSearchbar>
-      <form onSubmit={createNewTodo}>
-        <input
-          type='text'
-          name='todoInput'
-          placeholder='search or add Todo'
-          value={value}
-          onChange={e => onInput(e.target.value)}
-        />
-        <button>+ Todo</button>
-      </form>
-    </StyledSearchbar>
-  )
 }
