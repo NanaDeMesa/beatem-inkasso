@@ -8,7 +8,7 @@ export const StyledBackground = styled.main`
   border-radius: 25px 25px 0 0;
   height: 100%;
   display: grid;
-  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
 `;
 
 const StyledAmountBox = styled.section`
