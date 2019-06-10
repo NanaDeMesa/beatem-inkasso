@@ -7,7 +7,6 @@ export const StyledBackground = styled.main`
   background: #fbfbfb;
   border-radius: 25px 25px 0 0;
   display: grid;
-  grid-template-rows: 1fr 2fr 1fr;
   overflow-y: scroll;
   height: 500px;
 `;
