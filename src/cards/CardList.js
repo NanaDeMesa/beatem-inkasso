@@ -6,9 +6,9 @@ import Searchbar from "./Searchbar";
 export const StyledBackground = styled.main`
   background: #fbfbfb;
   border-radius: 25px 25px 0 0;
-  height: 100%;
   display: grid;
-  grid-template-rows: 1fr 2fr 2fr;
+  overflow-y: scroll;
+  height: calc(100vh - 170px);
 `;
 
 const StyledAmountBox = styled.section`

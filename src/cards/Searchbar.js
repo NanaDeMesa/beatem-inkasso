@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledSearchbar = styled.input`
-  margin: 35px auto 0 auto;
+  margin: 35px auto 35px auto;
   width: 326px;
   height: 36px;
   background: #eeeeee;
