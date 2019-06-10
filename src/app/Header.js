@@ -6,6 +6,7 @@ const StyledRandomTips = styled.header`
   display: grid;
   font-size: 18px;
   padding: 15px;
+  position: sticky;
 `;
 
 function Header() {

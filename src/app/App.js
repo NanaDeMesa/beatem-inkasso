@@ -17,7 +17,6 @@ const Grid = styled.div`
   display: grid;
   grid-template-rows: 90px auto 80px;
   height: 100vh;
-  position: absolute;
   width: 100%;
 `;
 
