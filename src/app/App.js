@@ -12,6 +12,7 @@ import {
 } from "../services";
 import CreatePage from "../create/CreatePage";
 import CardsPage from "../cards/CardsPage";
+import InfoPage from "../info/InfoPage";
 
 const Grid = styled.div`
   display: grid;
@@ -55,7 +56,7 @@ export default function App() {
         <Route
           path="/info"
           render={({ history }) => (
-            <CreatePage onFormSubmit={data => createCard(data, history)} />
+            <InfoPage onFormSubmit={data => createCard(data, history)} />
           )}
         />
         <Route

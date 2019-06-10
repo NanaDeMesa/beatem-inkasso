@@ -21,9 +21,7 @@ const StyledNavLink = styled(NavLink)`
   color: grey;
 `;
 
-const StyledIcon = styled.img`
-  f
-`;
+const StyledIcon = styled.img``;
 
 function Footer() {
   return (
