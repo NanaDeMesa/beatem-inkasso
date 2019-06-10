@@ -10,7 +10,7 @@ const StyledSearchbar = styled.input`
   border: solid 1px #d3d3d3;
   font-size: 18px;
   background-image: url(./assets/SearchButton.svg);
-  background-position: 285px 7px;
+  background-position: 285px 4px;
   background-repeat: no-repeat;
 `;
 

@@ -15,27 +15,24 @@ const StyledAmountBox = styled.section`
   background: #5495b7;
   border-radius: 15px;
   box-shadow: 2px 4px 10px #979797;
-  height: 200px;
+  height: 180px;
   margin: 0 auto 35px auto;
-  width: 220px;
+  width: 200px;
 `;
 
 const StyledCreditIcon = styled.img`
-  height: 72px;
-  margin-top: 30px;
-  margin-left: 25px;
-  width: 80px;
+  height: 50px;
+  margin: 30px 0 18px 18px;
+  width: 58px;
 `;
 
 const StyledResult = styled.div`
   color: white;
-  display: flex;
   font-size: 22px;
   font-weight: bold;
   height: 30px;
   margin: 0;
-  padding-left: 30px;
-  padding-top: 12px;
+  padding-left: 20px;
   width: 280px;
 `;
 
@@ -45,8 +42,7 @@ const StyledHeading = styled.h3`
   font-weight: bold;
   margin: 0 auto;
   opacity: 0.7;
-  padding-left: 30px;
-  padding-top: 8px;
+  padding-left: 22px;
 `;
 
 export default function CardList({ cards, deleteCard }) {
