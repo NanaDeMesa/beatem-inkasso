@@ -12,6 +12,13 @@ const StyledSearchbar = styled.input`
   background-image: url(./assets/SearchButton.svg);
   background-position: 285px 4px;
   background-repeat: no-repeat;
+  position: sticky;
+  top: 35px;
+  opacity: 0.8;
+
+  ::placeholder {
+    color: lightgrey;
+  }
 `;
 
 export default function Searchbar({ onInput, value }) {

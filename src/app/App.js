@@ -16,7 +16,7 @@ import InfoPage from "../info/InfoPage";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-rows: 90px auto 80px;
+  grid-template-rows: 90px auto 60px;
   height: 100vh;
   width: 100%;
 `;

@@ -8,7 +8,7 @@ export const StyledBackground = styled.main`
   border-radius: 25px 25px 0 0;
   display: grid;
   overflow-y: scroll;
-  height: calc(100vh - 170px);
+  height: calc(100vh - 150px);
 `;
 
 const StyledAmountBox = styled.section`
@@ -27,7 +27,7 @@ const StyledCreditIcon = styled.img`
 `;
 
 const StyledResult = styled.div`
-  color: white;
+  color: #fbfbfb;
   font-size: 22px;
   font-weight: bold;
   height: 30px;
@@ -88,7 +88,3 @@ export default function CardList({ cards, deleteCard }) {
     </StyledBackground>
   );
 }
-
-/* {filterCards.map(card => (
-  <Card key={card._id} {...card} deleteCard={() => deleteCard(card)} />
-  ))}*/
