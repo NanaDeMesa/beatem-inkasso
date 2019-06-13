@@ -1,12 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-
-const StyledRandomTips = styled.header`
-  color: white;
-  display: grid;
-  font-size: 18px;
-  padding: 15px;
-`;
+import {StyledRandomTips}
+   from "./HeaderStyles";
 
 function Header() {
   function getRandomTip() {
