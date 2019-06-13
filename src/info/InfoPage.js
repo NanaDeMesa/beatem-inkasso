@@ -4,6 +4,7 @@ import styled from "styled-components";
 const StyledInfoMain = styled.div`
   display: grid;
   grid-template-rows: 1fr 2fr;
+  height: ;
 `;
 
 const StyledCalcBox = styled.section`
@@ -17,7 +18,7 @@ const StyledCalcBox = styled.section`
   opacity: 0.7;
 `;
 
-const StyledHeading = styled.p`
+const StyledLabel = styled.label`
   color: white;
   font-size: 18px;
   margin: 9px;
@@ -26,12 +27,20 @@ const StyledHeading = styled.p`
 
 const StyledCalcInput = styled.input`
   display: flex;
-  width: 150px;
+  width: 200px;
   height: 35px;
   background: #5495b7;
   border: none;
   font-size: 22px;
   color: white;
+  outline: none;
+  padding-left: 4px;
+  border-radius: 8px;
+  border-bottom: 3px solid;
+
+  :focus {
+    border: 3px solid #F1B763;
+  }
 `;
 
 const StyledBackground = styled.section`
@@ -61,34 +70,42 @@ const StyledResult = styled.div`
 const StyledLegalInformation = styled.p`
   color: #a2a3a3;
   padding: 0 30px 0 30px;
-  font-size: 18px;
+  font-size: 18px; 
 `;
 
-const StyledQuestionMark = styled.img``;
+const StyledQuestionMark = styled.img`
+padding-left: 28px;
+`;
 
-function InfoPage() {
+export default function InfoPage() {
+  /*{ onFormSubmit }) {
+  function handleSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    onFormSubmit({
+      result: form.result.value
+    });
+  }*/
+
   return (
     <StyledInfoMain>
       <StyledCalcBox>
-        <StyledHeading>
+        <StyledLabel>
           Principal Cost:
-          <StyledCalcInput type="text" placholder="Type here..." />
-        </StyledHeading>
+          <StyledCalcInput type="number" name="calcInput" placholder="Type here..." required />
+        </StyledLabel>
       </StyledCalcBox>
       <StyledBackground>
         <StyledResultHeading>Allowed debt collection cost:</StyledResultHeading>
-        <StyledResult>0,00 €</StyledResult>
+        <StyledResult>€</StyledResult>
         <StyledQuestionMark
           src="/assets/QuestionMark.svg"
           alt="note question mark"
         />
         <StyledLegalInformation>
-          The debt collection cost depends on the RVG (Rechtsanwaltsvergütungs-
-          gesetz). All statements without guarantee.
+          The debt collection cost depends on the RVG (Rechtsanwaltsvergütungsgesetz). All statements without guarantee.
         </StyledLegalInformation>
       </StyledBackground>
     </StyledInfoMain>
   );
 }
-
-export default InfoPage;

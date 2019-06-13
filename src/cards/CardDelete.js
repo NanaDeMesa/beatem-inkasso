@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const Delete = styled.img`
-  width: 22px;
+ display: flex;
   height: 22px;
-  margin-bottom: 10px;
-  display: flex;
   justify-self: flex-end;
+  margin-bottom: 10px;
+  width: 22px;
 `;
 export default function CardDelete({ deleteCard }) {
   return (

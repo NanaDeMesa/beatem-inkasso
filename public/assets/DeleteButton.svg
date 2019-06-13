@@ -10,11 +10,11 @@
         <g id="Homepage" transform="translate(-253.000000, -476.000000)">
             <g id="Edit/Delete-Icons" transform="translate(239.000000, 467.000000)">
                 <g id="trash" transform="translate(11.000000, 7.000000)">
-                    <mask id="mask-2" fill="white">
+                    <mask id="mask-2" fill="red">
                         <use xlink:href="#path-1"></use>
                     </mask>
-                    <g id="Mask" fill-rule="nonzero"></g>
-                    <g id="color/black" mask="url(#mask-2)" fill="#000000" fill-rule="evenodd">
+                    <g id="Mask" fill-rule="red"></g>
+                    <g id="color/black" mask="url(#mask-2)" fill="red" fill-rule="evenodd">
                         <rect id="Change-Fill-Color" x="0" y="0" width="24" height="24"></rect>
                     </g>
                 </g>

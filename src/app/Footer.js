@@ -11,17 +11,22 @@ const StyledFooter = styled.footer`
 
 const StyledNavLink = styled(NavLink)`
   align-items: center;
+  background: rgba(192, 192, 192, 0.12);
   display: flex;
   font-size: 35px;
   height: 100%;
   justify-content: center;
   text-decoration: none;
-  width: 100%;
   user-select: none;
-  color: grey;
+  width: 100%;
+  &.active {
+    background: transparent;
+    color: white;
+  }
 `;
 
-const StyledIcon = styled.img``;
+const StyledIcon = styled.img`
+`;
 
 function Footer() {
   return (

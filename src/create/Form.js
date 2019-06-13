@@ -12,8 +12,8 @@ const FormGrid = styled.form`
   background: #fbfbfb;
   border-radius: 25px 25px 0 0;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  padding-top: 20px;
+  grid-template-rows: 1fr;
+  padding-top: 30px;
 `;
 
 const FormHeadline = styled.h1`
@@ -66,20 +66,21 @@ const StyledButtonContainer = styled.div`
 `;
 
 const StyledButton = styled.button`
+align-items: center;
+background: #5495b7;
+border: none
+border-radius: 50%;
+color: #fbfbfb;
+display: block;
+font-size: 40px;
+height: 50px;
+justify-content: center;
+max-width: 50px;
+min-width: 0;
+padding: 0;
   user-select: none;
-  display: block;
-  align-items: center;
-  background: #5495b7;
-  border: none;
-  border-radius: 50%;
-  color: #fbfbfb;
-  font-size: 40px;
-  height: 50px;
-  justify-content: center;
   width: 50px;
-  min-width: 0;
-  max-width: 50px;
-  padding: 0;
+
 
   ::-webkit-appearance {
     display: none;

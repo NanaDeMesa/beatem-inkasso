@@ -7,8 +7,8 @@ export const StyledBackground = styled.main`
   background: #fbfbfb;
   border-radius: 25px 25px 0 0;
   display: grid;
-  overflow-y: scroll;
   height: calc(100vh - 150px);
+  overflow-y: scroll;
 `;
 
 const StyledAmountBox = styled.section`
