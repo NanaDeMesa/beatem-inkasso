@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  StyledFooter,
-  StyledNavLink,
-  StyledIcons,}
-   from "./FooterStyles";
-
+import { StyledFooter, StyledNavLink, StyledIcons } from "./FooterStyles";
 
 function Footer() {
   return (

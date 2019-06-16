@@ -33,7 +33,7 @@ export const StyledDueDate = styled.div`
 `;
 
 export const DeleteIcon = styled.img`
- display: flex;
+  display: flex;
   height: 22px;
   justify-self: flex-end;
   margin-bottom: 10px;
@@ -51,7 +51,7 @@ export const StyledBackground = styled.main`
 export const StyledAmountBox = styled.section`
   background: #5495b7;
   border-radius: 15px;
-  box-shadow: 2px 4px 10px #979797;
+  box-shadow: 2px 4px 10px #5495b7;
   height: 180px;
   margin: 0 auto 35px auto;
   width: 200px;
