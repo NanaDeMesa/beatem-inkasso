@@ -12,10 +12,11 @@ import {
 } from "../services";
 import CreatePage from "../create/CreatePage";
 import CardsPage from "../cards/CardsPage";
+import InfoPage from "../info/InfoPage";
 
 const Grid = styled.div`
   display: grid;
-  grid-template-rows: 90px auto 80px;
+  grid-template-rows: 90px auto 60px;
   height: 100vh;
   width: 100%;
 `;
@@ -52,12 +53,7 @@ export default function App() {
           path="/"
           render={() => <CardsPage cards={cards} deleteCard={deleteCard} />}
         />
-        <Route
-          path="/info"
-          render={({ history }) => (
-            <CreatePage onFormSubmit={data => createCard(data, history)} />
-          )}
-        />
+        <Route path="/info" render={({ history }) => <InfoPage />} />
         <Route
           path="/add"
           render={({ history }) => (

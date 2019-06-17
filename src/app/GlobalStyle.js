@@ -10,8 +10,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
     margin: 0;
-    padding: 0;
     overflow: hidden;
+    padding: 0;
 }
 
 `;
