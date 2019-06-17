@@ -65,21 +65,20 @@ export const StyledButtonContainer = styled.div`
 `;
 
 export const StyledButton = styled.button`
-align-items: center;
-background: #5495b7;
-border: none
-border-radius: 50%;
-color: #fbfbfb;
-display: block;
-font-size: 40px;
-height: 50px;
-justify-content: center;
-max-width: 50px;
-min-width: 0;
-padding: 0;
+  align-items: center;
+  background: #5495b7;
+  border: none;
+  border-radius: 50%;
+  color: #fbfbfb;
+  display: block;
+  font-size: 40px;
+  height: 50px;
+  justify-content: center;
+  max-width: 50px;
+  min-width: 0;
+  padding: 0;
   user-select: none;
   width: 50px;
-
 
   ::-webkit-appearance {
     display: none;

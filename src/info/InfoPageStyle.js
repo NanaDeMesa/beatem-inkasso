@@ -7,37 +7,36 @@ export const StyledInfoMain = styled.div`
 
 export const StyledCalcBox = styled.section`
   background: #5495b7;
-  width: 311px;
-  height: 77px;
+  border-radius: 15px;
   display: flex;
+  height: 77px;
   justify-content: center;
   margin: 0 auto;
-  border-radius: 15px;
   opacity: 0.7;
+  width: 311px;
 `;
 
 export const StyledLabel = styled.label`
   color: white;
   font-size: 18px;
   margin: 9px;
-  text-align: center;
 `;
 
 export const StyledCalcInput = styled.input`
-  display: flex;
-  width: 200px;
-  height: 35px;
   background: #5495b7;
   border: none;
-  font-size: 22px;
+  border-bottom: 3px solid;
+  border-radius: 8px;
   color: white;
+  display: flex;
+  font-size: 22px;
+  height: 35px;
   outline: none;
   padding-left: 4px;
-  border-radius: 8px;
-  border-bottom: 3px solid;
+  width: 200px;
 
   :focus {
-    border: 3px solid #F1B763;
+    border: 3px solid #f1b763;
   }
 `;
 
@@ -48,30 +47,30 @@ export const StyledBackground = styled.section`
 
 export const StyledResultHeading = styled.p`
   color: #a2a3a3;
+  display: flex;
   font-weight: italic;
   font-size: 18px;
-  display: flex;
   padding: 30px;
 `;
 
 export const StyledResult = styled.div`
-  width: 311px;
-  height: 77px;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
   color: #383939;
+  display: flex;
   font-size: 22px;
   font-weight: bold;
+  height: 77px;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 311px;
 `;
 
 export const StyledLegalInformation = styled.p`
   color: #a2a3a3;
+  font-size: 18px;
   padding: 0 30px 0 30px;
-  font-size: 18px; 
 `;
 
 export const StyledQuestionMark = styled.img`
-padding-left: 28px;
+  padding-left: 28px;
 `;
-
