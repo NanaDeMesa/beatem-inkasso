@@ -53,7 +53,7 @@ export default function App() {
           path="/"
           render={() => <CardsPage cards={cards} deleteCard={deleteCard} />}
         />
-        <Route path="/info" render={({ history }) => <InfoPage />} />
+        <Route path="/info" render={() => <InfoPage />} />
         <Route
           path="/add"
           render={({ history }) => (

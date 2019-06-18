@@ -1,5 +1,6 @@
-export function getCards() {
-  return fetch("/cards").then(res => res.json());
+export async function getCards() {
+  const res = await fetch("/cards");
+  return await res.json();
 }
 
 export function postCard(data) {
@@ -14,14 +15,15 @@ export function handleDeleteCard(data, id) {
   return fetchCard("DELETE", data, id);
 }
 
-function fetchCard(method, data, id = "") {
-  return fetch("/cards/" + id, {
+async function fetchCard(method, data, id = "") {
+  const res = await fetch("/cards/" + id, {
     method,
     headers: {
       "Content-Type": "application/json"
     },
     body: JSON.stringify(data)
-  }).then(res => res.json());
+  });
+  return await res.json();
 }
 
 export function getFromLocal(name) {

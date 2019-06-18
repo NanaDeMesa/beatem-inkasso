@@ -1,16 +1,14 @@
 import React from "react";
-import { 
-FormContainer,
-FormGrid,
-FormHeadline,
-StyledWrapper,
-StyledInput,
-StyledLabel,
-StyledButtonContainer,
-StyledButton,
+import {
+  FormContainer,
+  FormGrid,
+  FormHeadline,
+  StyledWrapper,
+  StyledInput,
+  StyledLabel,
+  StyledButtonContainer,
+  StyledButton
 } from "./FormStyles";
-
-
 
 export default function Form({ onFormSubmit }) {
   function handleSubmit(event) {

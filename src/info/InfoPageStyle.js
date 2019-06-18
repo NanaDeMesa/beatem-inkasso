@@ -14,12 +14,13 @@ export const StyledCalcBox = styled.section`
   margin: 0 auto;
   opacity: 0.7;
   width: 311px;
+  text-align: center;
 `;
 
 export const StyledLabel = styled.label`
   color: white;
   font-size: 18px;
-  margin: 9px;
+  padding: 9px;
 `;
 
 export const StyledCalcInput = styled.input`
@@ -63,6 +64,14 @@ export const StyledResult = styled.div`
   margin: 0 auto;
   text-align: center;
   width: 311px;
+`;
+
+export const StyledDownArrow = styled.img`
+  position: relative;
+  top: 120px;
+  right: 110px;
+  width: 24px;
+  height: 24px;
 `;
 
 export const StyledLegalInformation = styled.p`
