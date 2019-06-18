@@ -8,7 +8,8 @@ import {
   StyledResultHeading,
   StyledResult,
   StyledLegalInformation,
-  StyledQuestionMark
+  StyledQuestionMark,
+  StyledDownArrow
 } from "./InfoPageStyle";
 
 export default function InfoPage() {
@@ -29,6 +30,7 @@ export default function InfoPage() {
             required
           />
         </StyledLabel>
+        <StyledDownArrow src="/assets/arrowDownButton.svg" />
       </StyledCalcBox>
       <StyledBackground>
         <StyledResultHeading>Allowed debt collection cost:</StyledResultHeading>

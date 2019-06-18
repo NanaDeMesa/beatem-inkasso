@@ -5,8 +5,10 @@ import {
   StyledBackground,
   StyledAmountBox,
   StyledCreditIcon,
-  StyledResult, 
-  StyledHeading} from "./CardStyles";
+  StyledResult,
+  StyledHeading
+} from "./CardStyles";
+import { uid } from "react-uid";
 
 export default function CardList({ cards, deleteCard }) {
   const [searchInput, setSearchInput] = useState("");
@@ -45,7 +47,7 @@ export default function CardList({ cards, deleteCard }) {
 
       <section>
         {filterCards().map(card => (
-          <Card key={card._id} {...card} deleteCard={() => deleteCard(card)} />
+          <Card key={uid(card)} {...card} deleteCard={() => deleteCard(card)} />
         ))}
       </section>
     </StyledBackground>

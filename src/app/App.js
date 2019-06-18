@@ -4,12 +4,7 @@ import styled from "styled-components";
 import Header from "./Header";
 import Footer from "./Footer";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import {
-  postCard,
-  getFromLocal,
-  setToLocal,
-  findIndexOfCard
-} from "../services";
+import { getFromLocal, setToLocal, findIndexOfCard } from "../services";
 import CreatePage from "../create/CreatePage";
 import CardsPage from "../cards/CardsPage";
 import InfoPage from "../info/InfoPage";
@@ -34,14 +29,10 @@ export default function App() {
     setCards(newCards);
   }
 
-  const createCard = (data, history) => {
-    postCard(data)
-      .then(newCard => {
-        setCards([...cards, newCard]);
-        history.push("/");
-      })
-      .catch(error => console.log(error));
-  };
+  function createCard(newCard, history) {
+    setCards([...cards, newCard]);
+    history.push("/");
+  }
 
   return (
     <Grid>
@@ -57,7 +48,9 @@ export default function App() {
         <Route
           path="/add"
           render={({ history }) => (
-            <CreatePage onFormSubmit={data => createCard(data, history)} />
+            <CreatePage
+              onFormSubmit={newCard => createCard(newCard, history)}
+            />
           )}
         />
         <Footer />

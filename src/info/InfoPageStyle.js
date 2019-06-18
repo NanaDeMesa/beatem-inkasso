@@ -22,6 +22,14 @@ export const StyledLabel = styled.label`
   margin: 9px;
 `;
 
+export const StyledDownArrow = styled.img`
+  position: relative;
+  top: 120px;
+  right: 110px;
+  width: 24px;
+  height: 24px;
+`;
+
 export const StyledCalcInput = styled.input`
   background: #5495b7;
   border: none;
